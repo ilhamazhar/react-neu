@@ -1,24 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+// import './App.css';
+import React from 'react';
+import Tombol from './components/Tombol';
+import Home from './Home';
+import Welcome from './Welcome';
 
 function App() {
+  const nama = 'Sarah'
+  const umur = 12
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <Home />
+    <Welcome name={nama} umur={umur} alamat='Jln. Kaliurang No.109'/>
+    <Welcome name='Angga'umur='22' alamat='Jln. Bantul No.10'/>
+    <Tombol nilai='Kirim'/>
+    <Tombol nilai='Save'/>
+    <Tombol nilai='Update'/>
+    <Tombol nilai='Delete'/>
+    </>
   );
 }
 
